@@ -1,0 +1,1 @@
+Arquivos utilizados na apresentação sobre padrões de qualidade no Diamond Talks
