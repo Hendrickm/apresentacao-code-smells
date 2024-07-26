@@ -1,0 +1,23 @@
+<!-- Evite lógicas em HTML
+Inserir lógica no HTML dificulta a manutenção e teste do código.
+// Exemplo ruim ❌ -->
+<div>
+  <span>{{ item.ativo ?  
+    (item.quantidade > 0 ? 'Em Estoque' : 'Fora de Estoque')
+    : 'Produto Inativo' 
+  }}</span>
+</div>
+
+<!-- Exemplo bom ✅
+Separe a lógica do HTML utilizando controllers, diretivas e pipes.-->
+<script>
+  function obterStatusEstoque(item) {
+    if (!item.ativo) 
+      return 'Produto Inativo';
+    
+    return item.quantidade > 0 ? 'Em Estoque' : 'Fora de Estoque';
+  };
+</script>
+<div>
+  <span>{{ obterStatusEstoque(item) }}</span>
+</div>

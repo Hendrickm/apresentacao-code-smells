@@ -1,0 +1,24 @@
+<!-- Evite repetição de código, sempre que possível crie componentes, 
+ diretivas ou pipes
+Código repetido é difícil de manter.
+
+Exemplo ruim ❌ -->
+<div class="cartao-usuario">
+  <p>{{ usuario.nome }}</p>
+  <p>{{ usuario.email }}</p>
+</div>
+
+<div class="cartao-usuario">
+  <p>{{ usuario.nome }}</p>
+  <p>{{ usuario.email }}</p>
+</div>
+
+
+<!-- 
+Como aplicar: Extraia código repetido em componentes,
+ diretivas, ou pipes reutilizáveis.
+Exemplo bom ✅ -->
+
+<p-card-usuario [usuario]="usuario"></p-card-usuario>
+
+

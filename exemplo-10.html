@@ -1,0 +1,21 @@
+<!--Utilize Id para facilitar a criação de testes automatizados
+Um elemento HTML sem id dificulta a sua seleção em ferramentas 
+como Cypress
+Exemplo ruim ❌ -->
+<div class="form-usuario">
+  <label>Email</label>
+  <input type="text">
+  <button label="Enviar" class="button-primary">
+</div>
+
+<!--Utilize id para identificar qualquer elemento único que poderá passar 
+por interação com usuário ou validação no teste automatizado
+Exemplo bom ✅  -->
+<div id="formulario-usuario" class="form-usuario">
+  <label id="lb-email">Email</label>
+  <input id="cmp-email" type="text">
+  <button id="bt-enviar" label="Enviar" class="button-primary">
+</div>
+
+
+
